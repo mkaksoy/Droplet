@@ -3,13 +3,13 @@
 	"id": "droplet",
 	"version": "${version}",
 	"name": "Droplet",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A powerful and stable optimization mod for Minecraft",
 	"authors": [
 		"Mehmet Kaan AKSOY"
 	],
 	"contact": {
 		"homepage": "",
-		"sources": "https://github.com/mkaksoy/fabric-example-mod"
+		"sources": "https://github.com/mkaksoy/Droplet"
 	},
 	"license": "MIT",
 	"icon": "assets/droplet/icon.png",
