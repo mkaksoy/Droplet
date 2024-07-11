@@ -13,10 +13,10 @@
 	},
 	"license": "MIT",
 	"icon": "assets/droplet/icon.png",
-	"environment": "*",
+	"environment": "client",
 	"entrypoints": {
 		"main": [
-			"github.mkaksoy.Droplet"
+
 		]
 	},
 	"mixins": [
