@@ -5,13 +5,13 @@
 	"name": "Droplet",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Mehmet Kaan Aksoy"
+		"Mehmet Kaan AKSOY"
 	],
 	"contact": {
 		"homepage": "",
 		"sources": "https://github.com/mkaksoy/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/droplet/icon.png",
 	"environment": "*",
 	"entrypoints": {
