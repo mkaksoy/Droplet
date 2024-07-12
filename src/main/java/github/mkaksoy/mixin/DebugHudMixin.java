@@ -49,20 +49,17 @@ public abstract class DebugHudMixin {
         String directionString = getDirection(yaw);
         String gameTime = getGameTime();
         String realTime = getRealTime();
-        String biomeInfo = getBiomeInfo();
 
         List<String> list = Lists.newArrayList();
-        list.add("§bDroplet Rendering 1.0.1+0 - Release");
+        list.add("§bDroplet Rendering 1.0.1 - Release");
         list.add(blockPosString);
         list.add(String.format(Locale.ROOT, "FPS: %d", MinecraftClient.getInstance().getCurrentFps()));
         list.add(String.format("Direction: %s (%.1f°)", directionString, yaw));
         list.add("Game Time: " + gameTime);
         list.add("Real Time: " + realTime);
-        list.add("Biome: " + biomeInfo);
 
         return list;
     }
-
 
     @Unique
     private String getDirection(float yaw) {
@@ -91,9 +88,9 @@ public abstract class DebugHudMixin {
     private String getGameTime() {
         assert this.client.world != null;
         long timeOfDay = this.client.world.getTimeOfDay();
-        long hours = (timeOfDay / 1000 + 6) % 24; // 6 added to shift time to daytime start (6:00)
+        long hours = (timeOfDay / 1000 + 6) % 24;
         long minutes = (timeOfDay % 1000) * 60 / 1000;
-        String period = (timeOfDay >= 0 && timeOfDay < 12000) ? "Day" : "Night"; // 12000 ticks = 1 day in Minecraft
+        String period = (timeOfDay >= 0 && timeOfDay < 12000) ? "Day" : "Night";
 
         return String.format(Locale.ROOT, "%02d:%02d (%s)", hours, minutes, period);
     }
@@ -104,12 +101,4 @@ public abstract class DebugHudMixin {
         sdf.setTimeZone(TimeZone.getDefault());
         return sdf.format(new Date());
     }
-
-    @Unique
-    private String getBiomeInfo() {
-        assert this.client.world != null;
-        BlockPos blockPos = Objects.requireNonNull(this.client.getCameraEntity()).getBlockPos();
-        return this.client.world.getBiome(blockPos).toString();
-    }
-
 }
