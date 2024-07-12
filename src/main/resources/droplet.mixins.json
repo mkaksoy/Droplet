@@ -2,13 +2,11 @@
   "required": true,
   "package": "github.mkaksoy.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "DebugHudMixin"
-  ],
+  "mixins": [],
   "injectors": {
     "defaultRequire": 1
   },
   "client": [
-    "DebugHudMixin"
+    "DebugHudMixin",
   ]
 }
