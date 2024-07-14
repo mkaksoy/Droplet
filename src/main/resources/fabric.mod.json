@@ -3,15 +3,15 @@
 	"id": "droplet",
 	"version": "${version}",
 	"name": "Droplet",
-	"description": "A powerful and stable optimization mod for Minecraft",
+	"description": "A powerful stabilization mod for Minecraft",
 	"authors": [
-		"Mehmet Kaan AKSOY"
+		"mkaksoy13"
 	],
 	"contact": {
 		"homepage": "",
-		"sources": "https://github.com/mkaksoy/Droplet"
+		"sources": ""
 	},
-	"license": "MIT",
+	"license": "mkaksoy13 CLA",
 	"icon": "assets/droplet/icon.png",
 	"environment": "client",
 	"entrypoints": {
