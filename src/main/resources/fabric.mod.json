@@ -11,7 +11,7 @@
 		"homepage": "",
 		"sources": ""
 	},
-	"license": "mkaksoy13 CLA",
+	"license": "MIT",
 	"icon": "assets/droplet/icon.png",
 	"environment": "client",
 	"entrypoints": {
