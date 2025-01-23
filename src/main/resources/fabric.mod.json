@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "droplet",
+	"version": "${version}",
+	"name": "Droplet",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Mehmet Kaan AKSOY"
+	],
+	"contact": {
+		"sources": "https://gitlab.com/mkaksoy/droplet"
+	},
+	"license": "PolyForm-Shield",
+	"icon": "assets/droplet/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"gitlab.mkaksoy.droplet.Main"
+		]
+	},
+	"mixins": [
+		"droplet.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
