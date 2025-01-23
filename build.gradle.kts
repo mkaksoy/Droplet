@@ -10,12 +10,20 @@ base {
 	archivesName.set(project.property("archives_base_name") as String)
 }
 
+repositories {
+	maven { url = uri("https://maven.shedaniel.me/") }
+	maven { url = uri("https://maven.terraformersmc.com/releases/") }
+}
+
 dependencies {
 	minecraft("com.mojang:minecraft:${project.property("minecraft_version")}")
 	mappings(loom.officialMojangMappings())
 	modImplementation("net.fabricmc:fabric-loader:${project.property("loader_version")}")
-
 	modImplementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
+
+	modApi("me.shedaniel.cloth:cloth-config-fabric:17.0.144") {
+		exclude(group = "net.fabricmc.fabric-api")
+	}
 }
 
 tasks.processResources {
@@ -38,7 +46,7 @@ java {
 }
 
 tasks.jar {
-	from("LICENSE") {
+	from("LICENSE.md") {
 		rename { "${it}_${base.archivesName.get()}" }
 	}
 }
